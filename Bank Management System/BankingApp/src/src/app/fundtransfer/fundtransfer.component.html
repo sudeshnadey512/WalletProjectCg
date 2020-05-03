@@ -1,0 +1,35 @@
+
+<br>
+<h3 style="color: aqua">Fund Transfer</h3>
+
+<div class="container" align="center">
+
+
+
+  <form action="" class= "form-group col-md-5" (ngSubmit)="onSubmit()" [formGroup]="fundTransferForm" >
+      <input type="text" class ="form-control" name ="accountId" placeholder="Enter transferring Account Id" formControlName="transferAccountId" [ngClass]="{'is-invalid': submitted && state.transferAccountId.errors}" />
+      <div *ngIf="submitted && state.transferAccountId.errors" class="invalid-feedback">
+          <div *ngIf="state.transferAccountId.errors.required">AccountId is required</div>
+          <div *ngIf="state.transferAccountId.errors.pattern">Enter digits only</div>
+      </div>
+
+      <br>
+      <input type="text" class ="form-control" name ="deposit" placeholder="Enter the Amount to Transfer" formControlName="transferAmount" [ngClass]="{'is-invalid': submitted && state.transferAmount.errors}" />
+      <div *ngIf="submitted && state.transferAmount.errors" class="invalid-feedback">
+          <div *ngIf="state.transferAmount.errors.required">Amount is required</div>
+          <div *ngIf="state.transferAmount.errors.pattern">Enter digits only</div>
+      </div>
+
+      <br>
+  
+      <button type="submit"  class="btn btn-success" id="success-button" >Transfer</button>
+      &nbsp;&nbsp;&nbsp;<button type="reset" class="btn btn-danger"  >Reset</button> 
+
+
+    </form>
+
+    <button id="Back"  [routerLink]="['menu']" (click)="gotoMenu()" class="btn btn-primary" >Back</button>
+
+
+
+</div>

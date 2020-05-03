@@ -1,0 +1,28 @@
+
+<br>
+<h3 style="color: aqua">Withdraw</h3>
+<br>
+<br>
+
+<div class="container" align="center">
+
+
+
+    <form action="" class= "form-group col-md-5" (ngSubmit)="onSubmit()" [formGroup]="withdrawForm" >
+        <input type="text" class ="form-control" name ="deposit" placeholder="Enter the Amount to Withdraw" formControlName="withdrawAmount" [ngClass]="{'is-invalid': submitted && state.withdrawAmount.errors}" />
+        <div *ngIf="submitted && state.withdrawAmount.errors" class="invalid-feedback">
+            <div *ngIf="state.withdrawAmount.errors.required">Amount is required</div>
+            <div *ngIf="state.withdrawAmount.errors.pattern">Enter digits only</div>
+        </div>
+
+        <br>
+    
+        <button type="submit"  class="btn btn-success" id="success-button" >Withdraw</button>
+        &nbsp;&nbsp;&nbsp;<button type="reset" class="btn btn-danger"  >Reset</button> 
+
+
+      </form>
+      <button id="Back"  [routerLink]="['menu']" (click)="gotoMenu()" class="btn btn-primary" >Back</button>
+
+
+</div>

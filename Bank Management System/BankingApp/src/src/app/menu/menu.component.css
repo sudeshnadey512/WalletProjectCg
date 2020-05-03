@@ -1,0 +1,48 @@
+#print{
+
+background-color: blueviolet;
+border-radius: 50%;
+height:140px;
+position: absolute;
+bottom: 15%;
+left: 65%;
+}
+
+#show{
+border-radius: 52%;
+height:135px;
+width: 140px;
+position: absolute;
+bottom: 60%;
+left: 8%;
+}
+
+#deposit{
+
+border-radius: 50%;
+height:140px;
+width: 140px;
+position: absolute;
+bottom: 60%;
+left: 45%;
+}
+
+#transfer{
+
+border-radius: 50%;
+height:140px;
+width:140px;
+position: absolute;
+bottom: 60%;
+left: 80%;
+}
+#withdraw{
+
+border-radius: 50%;
+height:140px;
+width:140px;
+position: absolute;
+bottom: 15%;
+left: 26%;
+
+}

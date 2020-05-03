@@ -1,0 +1,30 @@
+<br>
+
+<h3 style="color: aquamarine">Transaction Table</h3>
+
+<br>
+
+
+<br>
+<table border="1px" align=center style="color:antiquewhite">
+
+
+  <tr><th>Transaction Id</th><th>Account Id</th><th>Transaction date</th><th>Amount</th><th>Transferring Account Id</th><th>Type</th><th>Updated Balance</th>                                                             </tr>
+
+  <tr *ngFor="let list of transactionList">
+
+    <td>{{list.transactionId}}</td>
+    <td>{{list.accountId}}</td>
+    <td>{{list.transactiondate}}</td>
+    <td>{{list.amount|currency:'INR'}}</td>
+    <td>{{list.transferaccountid}}</td>
+    <td>{{list.type}}</td>
+    <td>{{list.updatedamount|currency:'INR'}}</td>
+
+</tr>
+
+
+
+</table>
+<br>
+<button id="Back"  [routerLink]="['menu']" (click)="gotoMenu()" class="btn btn-primary" >Back</button>

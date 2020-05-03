@@ -1,0 +1,40 @@
+
+
+<br>
+<br>
+<br>
+  <div class="container" align="center">
+
+    <img src ="/assets/login.png" style="width:100px;height:100px;">
+    <p style="color:aliceblue">Log In</p>
+
+    <form action="" class= "form-group col-md-5" (ngSubmit)="onSubmit()" [formGroup]="myForm" >
+  
+    <input type="text" class ="form-control" name ="mobile" placeholder="Enter Mobile Number" formControlName="mobileNumber" [ngClass]="{'is-invalid': submitted && state.mobileNumber.errors}" title="Mobile must contain 10 digits"/>
+    <div *ngIf="submitted && state.mobileNumber.errors" class="invalid-feedback">
+        <div *ngIf="state.mobileNumber.errors.required">Mobile Number Required</div>
+        <div *ngIf="state.mobileNumber.errors.pattern">Mobile Number must contain 10 digits</div>
+  
+      </div>
+    <br>
+      <input type="password"  name="loginpass" class ="form-control" placeholder="Enter Password" formControlName="password" [ngClass]="{'is-invalid': submitted && state.password.errors}" />
+      <div *ngIf="submitted && state.password.errors" class="invalid-feedback">
+          <div *ngIf="state.password.errors.required">Password Required</div>
+          <div *ngIf="state.password.errors.pattern">Password contains minimum of 4 digits</div>
+    
+        </div>
+      <br>
+     <button type="submit"  class="btn btn-success" id="success-button" >Login</button>
+     &nbsp;&nbsp;&nbsp;<button type="reset" class="btn btn-danger"  >Reset</button>  
+
+    
+     
+  </form>
+  <p style="color: bisque">New User?</p>
+   <button id="create" [routerLink]="['create']" (click)="createAccount()" class="btn btn-primary" routerLinkActivate="activate">Create Account</button><br>  
+  
+  
+  </div>
+
+  
+

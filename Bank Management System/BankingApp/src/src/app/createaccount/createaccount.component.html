@@ -1,0 +1,82 @@
+<h3 style="color:aliceblue">
+  Create Account
+</h3>
+<br>
+<div class="container" align="center">
+
+ <!-- <img src ="/assets/login.png" style="width:100px;height:100px;">
+  <p style="color:aliceblue">Log In</p>-->
+
+  <form action="" class= "form-group col-md-5" (ngSubmit)="onSubmit()" [formGroup]="createAccountForm" >
+<label style="color: aliceblue">Enter Full name</label>
+  <input type="text" class ="form-control" placeholder="Enter Full Name" formControlName="name" [ngClass]="{'is-invalid': submitted && state.name.errors}" title="Enter full name"/>
+  <div *ngIf="submitted && state.name.errors" class="invalid-feedback">
+      <div *ngIf="state.name.errors.required">Name is Required</div>
+      <div *ngIf="state.name.errors.pattern">First Name must start with capital letter</div>
+
+    </div>
+  <br>
+  <label style="color: aliceblue">Enter Password</label>
+    <input type="password" class ="form-control" placeholder="Enter Password" formControlName="password" [ngClass]="{'is-invalid': submitted && state.password.errors}" />
+    <div *ngIf="submitted && state.password.errors" class="invalid-feedback">
+        <div *ngIf="state.password.errors.required">Password Required</div>
+        <div *ngIf="state.password.errors.pattern">Password contains minimum of 4 digits</div>
+  
+      </div>
+    <br>
+    <label style="color: aliceblue">Confirm your password</label>
+    <input type="password" class ="form-control" placeholder="Confirm Password" formControlName="confirmPassword" [ngClass]="{'is-invalid': submitted && state.confirmPassword.errors}" />
+    <div *ngIf="submitted && state.confirmPassword.errors" class="invalid-feedback">
+        <div *ngIf="state.confirmPassword.errors.required">Confirm Password Required</div>
+
+  
+      </div>
+    <br>
+    <label style="color: aliceblue">Enter Mobile Number</label>
+    <input type="text" class ="form-control" placeholder="Enter Mobile Number" formControlName="mobileNumber" [ngClass]="{'is-invalid': submitted && state.mobileNumber.errors}" />
+    <div *ngIf="submitted && state.mobileNumber.errors" class="invalid-feedback">
+        <div *ngIf="state.mobileNumber.errors.required">Mobile Number Required</div>
+        <div *ngIf="state.mobileNumber.errors.pattern">Must be of 10 digits</div>
+  
+      </div>
+    <br>
+    <label style="color: aliceblue">Enter your date of birth</label>
+    <input type="date" class ="form-control" placeholder="Enter Date of Birth" formControlName="dob" [ngClass]="{'is-invalid': submitted && state.dob.errors}" />
+    <div *ngIf="submitted && state.dob.errors" class="invalid-feedback">
+        <div *ngIf="state.dob.errors.required">Date of Birth Required</div>
+   </div>
+   <br>
+   <label style="color: aliceblue">Enter Aadhar Number</label>
+    <input type="text" class ="form-control" placeholder="Enter Aadhar Number" formControlName="aadharNumber" [ngClass]="{'is-invalid': submitted && state.aadharNumber.errors}" />
+    <div *ngIf="submitted && state.aadharNumber.errors" class="invalid-feedback">
+        <div *ngIf="state.aadharNumber.errors.required">Aadhar Number Required</div>
+        <div *ngIf="state.aadharNumber.errors.pattern">Must be of 12 digits</div>
+  
+      </div>
+    <br>
+    <label style="color: aliceblue">Enter your account name</label>
+      <input type="text" class ="form-control" placeholder="Enter Account Number" formControlName="accountNumber" [ngClass]="{'is-invalid': submitted && state.accountNumber.errors}" />
+    <div *ngIf="submitted && state.accountNumber.errors" class="invalid-feedback">
+        <div *ngIf="state.accountNumber.errors.required">Account Number Required</div>
+        <div *ngIf="state.accountNumber.errors.pattern">Must be of 14 digits</div>
+  
+      </div>
+      
+    <br>
+    <label style="color: aliceblue">Enter 6 digit pin</label>
+    <input type="text" class ="form-control" placeholder="Enter 6 digit Pin" formControlName="pin" [ngClass]="{'is-invalid': submitted && state.pin.errors}" />
+    <div *ngIf="submitted && state.pin.errors" class="invalid-feedback">
+        <div *ngIf="state.pin.errors.required">Pin Required</div>
+        <div *ngIf="state.pin.errors.pattern">Must be of 6 digits</div>
+  
+      </div>
+    <br>
+    
+   <button type="submit" class="btn btn-success"  >Submit</button>
+   &nbsp;&nbsp;&nbsp;<button type="reset" class="btn btn-danger"  >Reset</button>  
+  
+   
+</form><br>
+<br>
+
+</div>

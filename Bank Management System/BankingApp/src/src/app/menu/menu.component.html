@@ -1,0 +1,11 @@
+<h4 style="color:bisque">
+  <b>Welcome {{name}}</b> 
+</h4>
+<br>
+
+<button id="show"  [routerLink]="['show']" (click)="showBalance()" class="btn btn-primary" >Show Balance</button>
+<button id="deposit" [routerLink]="['deposit']" (click) = "deposit()" class="btn btn-success" >Deposit</button>
+<button id="withdraw"  [routerLink]="['transaction']" (click)="withdraw()" class="btn btn-warning" style="color: aliceblue" >Withdraw</button>
+<button id="transfer" [routerLink]="['fund']" (click) = "gotoFundTransfer()" class="btn btn-danger" >Fund Transfer</button>
+<button id="print" [routerLink]="['transaction']" (click) = "gotoTransaction()" class="btn btn-circle btn-pink"  style="color: aliceblue">Print Transaction</button>
+
