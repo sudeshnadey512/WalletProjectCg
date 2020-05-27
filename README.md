@@ -8,6 +8,8 @@ Angular
 
 JDBC  
 
-Log4j  
+Log4j 
+
+Regular Expression For pattern in validation
 
 Selenium Automation Testing
