@@ -1,8 +1,7 @@
 J2EE
-Spring JPA Hybernate
+Spring Boot
 Layered Architecture
 Angular
 JDBC
-Junit
 Log4j
 Selenium Automation Testing
