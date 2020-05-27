@@ -1,13 +1,13 @@
-J2EE, 
+J2EE 
 
-Spring Boot, 
+Spring Boot 
 
-Layered Architecture,  
+Layered Architecture  
 
-Angular,  
+Angular  
 
-JDBC,  
+JDBC  
 
-Log4j,  
+Log4j  
 
 Selenium Automation Testing
